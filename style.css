@@ -102,7 +102,7 @@ video{
 }
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: 10;
 }
@@ -151,4 +151,107 @@ video{
     to{
         transform: translateX(-100%);
     }
+}
+
+#about_us{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+#about_us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+    position: relative;
+}
+
+#about_us_in{
+    width: 50%;
+    text-emphasis: after;
+    text-align: center;
+}
+#about_us_in h3{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+#about_us_in p{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#card_container{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.card{
+    height: 80%;
+    width: 22%;
+    background-color: #95c11e;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+    transition: .6s;
+}
+
+#card1{
+    background-image: url(assets/card1.avif);
+}
+#card2{
+    background-image: url(assets/card2.webp);
+}
+#card3{
+    background-image: url(assets/card3.avif);
+}
+
+.overlay{
+    background-color: #95C11E;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    padding-top: 160px;
+    opacity: 0;
+    overflow: hidden;
+    transition: .6s;
+    border-radius: 20px;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    
+
+}
+
+.overlay p{
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    
+
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
 }
