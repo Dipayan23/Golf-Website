@@ -8,6 +8,20 @@ document.addEventListener("mousemove",function(dets){
 })
 
 
+var h4=document.querySelectorAll("#nav h4")
+h4.forEach(function(elem){
+    elem.addEventListener("mouseenter",function () {
+        crsr.style.scale=3;
+        crsr.style.border="1px solid white"
+        crsr.style.backgroundColor="transparent"
+    })
+    elem.addEventListener("mouseleave",function () {
+        crsr.style.scale=1;
+        crsr.style.border="0px solid white"
+        crsr.style.backgroundColor="#95c11e"
+    })
+})
+
 
 
 
@@ -33,5 +47,39 @@ gsap.to("#main",{
         start:"top -25%",
         end:"top -70%",
         scrub:2,
+    }
+})
+
+gsap.from("#about_us img,#about_us_in",{
+    y:50,
+    opacity:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:"#about_us",
+        scroller:"body"
+    }
+})
+
+gsap.from("#colon1",{
+    y:-70,
+    x:-70,
+    scrollTrigger:{
+        trigger:"#colon1",
+        scroller:"body",
+        start:"top 55%",
+        end:"top 45%",
+        scrub:4
+    }
+})
+
+gsap.from("#colon2",{
+    y:70,
+    x:70,
+    scrollTrigger:{
+        trigger:"#colon1",
+        scroller:"body",
+        start:"top 55%",
+        end:"top 45%",
+        scrub:4
     }
 })
